@@ -1,0 +1,85 @@
+ * {box-sizing: border-box}
+
+
+
+
+.Signup {
+    position: relative;
+    left: 300px;
+    top: 50px;
+    
+}
+
+.form {
+  padding-right: 100px;
+}
+
+
+input, select{
+  width: 49%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border-style: solid;
+  border-color: gainsboro;
+  background: #f1f1f1;
+}
+
+
+button {
+    background-color: #047baa;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 49%;
+    opacity: 0.9;
+  }
+
+button:disabled {
+  background-color: lightgrey;
+}
+  
+
+.paragraph {
+    position: relative;
+    width: 49%;
+}
+
+.password {
+  margin-bottom: 2px;
+}
+
+.passwordRed {
+  margin-bottom: 2px;
+  border-color: red;
+}
+
+.passwordNormal {
+  border-color: rgb(226, 219, 219);
+  margin-bottom: 2px;
+}
+
+.warningMessagePassowrd {
+  margin: 0px;
+  padding-bottom: 20px;
+  padding-top: 0px;
+  font-size: small;
+}
+
+.email {
+  border-color: rgb(226, 219, 219);
+}
+
+.emailRed {
+  border-color: red;
+  margin-bottom: 2px;
+}
+
+.warningMessageEmail {
+  margin: 0px;
+  padding-top: 0px;
+  font-size: small;
+}
+

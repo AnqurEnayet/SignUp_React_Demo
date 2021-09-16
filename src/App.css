@@ -10,13 +10,13 @@
 .flex-container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 140vh;
 }
 
 .left {
-  width: 60%;
+  width: 68%;
 }  
 
 .right {
-  width: 40%;
+  width: 32%;
 }

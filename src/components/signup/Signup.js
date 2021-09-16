@@ -11,7 +11,7 @@ const Signup = () => {
     const [email, setEmail] = useState(null);
     const [emailValidator, setEmailValidator] = useState(false);
 
-    const [description, setDescription] = useState(null);
+    const [description, setDescription] = useState('');
 
     const [password, setPassword] = useState(null);
     const [passwordValidator, setPasswordValidator] = useState(false);
@@ -20,8 +20,8 @@ const Signup = () => {
 
     useEffect(() => {
         console.log(formValidator)
-        if (name !=='' && email !=='' && password !==null && description !=='') {
-            if(password.length>=8)setformValidator(true);
+        if (name !== '' && email !== '' && password !== null && description !== '') {
+            if (password.length >= 8) setformValidator(true);
 
         } else {
             setformValidator(false);
@@ -32,7 +32,7 @@ const Signup = () => {
             setEmailValidator(false);
         }
 
-        if (password!== null && password.length >= 8) {
+        if (password !== null && password.length >= 8) {
             setPasswordValidator(true);
         } else {
             setPasswordValidator(false);
@@ -72,30 +72,40 @@ const Signup = () => {
     }
 
     return (
-        <div className="Signup" onSubmit={submitHandler}>
-            <h1>Let's set up your account</h1>
-            <p>Already have an account <a href="">Sign in</a></p>
-            <form className="form">
-                <input type="text" placeholder="Your name" onChange={nameHandler}></input><br />
-                <input type="email"
-                    placeholder="Email"
-                    onChange={emailHandler}
-                    className={(email!=null && emailValidator==false)? "emailRed" : "email"}
+        <div className="Signup">
+            <p className="steps">Step 1 of 3 <span class="active-dot"></span><span class="dot"></span><span class="dot"></span></p>
+            <h1 className="form-header">Let's set up your account</h1>
+            <p className="account-existance">Already have an account? <a href="">Sign in</a></p>
+            <form className="form" onSubmit={submitHandler}>
+                <input type="text"
+                    onChange={nameHandler}
                 ></input>
-                {(email!==null && emailValidator==false)? <p className="warningMessageEmail">Please Enter a valid Email Address</p> : ""}
+                <label className={name == '' ? "form-Label" : "form-nameLabel"}>Your Name</label>
                 <br />
-                <label>
-                    <select placeholder="I would describe my user type as" onChange={descriptionHandler}>
-                        <option value="lime">Lime</option>
-                        <option value="coconut">Coconut</option>
-                        <option value="mango">Mango</option>
-                    </select>
-                </label><br />
-                <input 
-                type="password" 
-                placeholder="Password" 
-                onChange={passwordHandler} 
-                className={(password!==null && passwordValidator==false)? "passwordRed" : "passwordNormal"}></input><br />
+                <input type="email"
+                    onChange={emailHandler}
+                    className={(email !== null && emailValidator == false) ? "emailRed" : "email"}
+                ></input>
+                <label 
+                className={email == '' || email == null ? "form-Label" : "form-emailLabel"}
+                style={(email!=='' && email!== null && emailValidator==false)?{color:"red"}:{}}
+                >Email</label>
+                {(email !== null && emailValidator == false) ? <p className="warningMessageEmail">Please Enter a valid Email Address</p> : ""}
+                <br />
+                <select placeholder="I would describe my user type as" onChange={descriptionHandler}>
+                    <option></option>
+                    <option value="Rare">Rare</option>
+                    <option value="Often">Often</option>
+                    <option value="Regular">Regular</option>
+                </select>
+                <label className={description == '' || description == null ? "form-Label" : "form-descriptionLabel"}>I would describe my user type as</label><br />
+                <input
+                    type="password"
+                    onChange={passwordHandler}
+                    className={(password !== null && passwordValidator == false) ? "passwordRed" : "passwordNormal"}
+                ></input>
+                <label className={password == '' || password == null ? "form-Label" : "form-passwordLabel"}>Password</label>
+                <br />
                 <p className="warningMessagePassowrd">Minimum 8 characters</p>
                 <button type="submit" value="submit" disabled={!formValidator}>Next</button>
             </form>

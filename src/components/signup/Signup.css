@@ -5,46 +5,126 @@
 
 .Signup {
     position: relative;
-    left: 300px;
+    left: 280px;
     top: 50px;
     
+}
+
+.steps {
+  padding-left: 830px;
+  font-size: 17px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  word-spacing: 2px;
+}
+
+.active-dot {
+  height: 6px;
+  width: 6px;
+  background-color: black;
+  margin-bottom: 2.5px;
+  margin-left: 5px;
+  margin-right: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  margin-bottom: 2.5px;
+  margin-left: 5px;
+  margin-right: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .form {
   padding-right: 100px;
 }
 
+.form-header {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 38px;
+  font-weight:900;
+  padding-top: 280px;
+  padding-bottom: 40px;
+  color: #222121;
+}
+
+.account-existance {
+  font-family: sans-serif;
+  font-size: 19px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
 
 input, select{
-  width: 49%;
-  padding: 15px;
+  width: 600px;
+  padding: 19px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border-style: solid;
-  border-color: gainsboro;
+  border-color: rgb(236, 236, 236);
   background: #f1f1f1;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 19px;
+}
+
+input:focus {
+  border: none;
 }
 
 
 button {
     background-color: #047baa;
     color: white;
-    padding: 14px 20px;
+    padding: 25px 20px;
     margin: 8px 0;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
-    width: 49%;
+    width: 600px;
     opacity: 0.9;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
   }
 
+a {
+  text-decoration: none;
+  color: #047baa;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
 button:disabled {
-  background-color: lightgrey;
+  background-color: rgb(236, 236, 236);
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: gray;
+}
+
+.button-value {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: gray;
 }
   
 
 .paragraph {
     position: relative;
-    width: 49%;
+    width: 610px;
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-size: 16px;
+    word-spacing: 2px;
+    line-height: 30px;
 }
 
 .password {
@@ -57,19 +137,22 @@ button:disabled {
 }
 
 .passwordNormal {
-  border-color: rgb(226, 219, 219);
+  border-color: rgb(236, 236, 236);
   margin-bottom: 2px;
 }
 
 .warningMessagePassowrd {
   margin: 0px;
   padding-bottom: 20px;
-  padding-top: 0px;
-  font-size: small;
+  padding-top: 12px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: gray;
+  font-weight: lighter;
 }
 
 .email {
-  border-color: rgb(226, 219, 219);
+  border-color: rgb(236, 236, 236);
 }
 
 .emailRed {
@@ -79,7 +162,79 @@ button:disabled {
 
 .warningMessageEmail {
   margin: 0px;
-  padding-top: 0px;
-  font-size: small;
+  padding-top: 12px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: red;
+  font-weight: lighter;
 }
+
+
+
+
+.form-Label {
+  position: relative;
+  right: 575px;
+  font: 1.15rem sans-serif;
+  color: rgb(151, 149, 149);
+}
+
+.form-nameLabel {
+  position: relative;
+  transition-property: bottom;
+  transition-delay: .2s;
+  transition-timing-function: ease-in-out;
+  right: 575px;
+  bottom: 30px;
+  color: gray;
+  background-color: white;
+  background-color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+
+}
+
+.form-emailLabel {
+  position: relative;
+  transition-property: bottom;
+  transition-delay: .2s;
+  transition-timing-function: ease-in-out;
+  right: 575px;
+  bottom: 30px;
+  color: gray;
+  background-color: white;
+  background-color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+
+.form-passwordLabel {
+  position: relative;
+  transition-property: bottom;
+  transition-delay: .2s;
+  transition-timing-function: ease-in-out;
+  right: 575px;
+  bottom: 30px;
+  color: gray;
+  background-color: white;
+  background-color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.form-descriptionLabel {
+  position: relative;
+  transition-property: bottom;
+  transition-delay: .2s;
+  transition-timing-function: ease-in-out;
+  right: 575px;
+  bottom: 30px;
+  color: gray;
+  background-color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+
+}
+
 
